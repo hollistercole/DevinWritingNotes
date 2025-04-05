@@ -112,7 +112,9 @@ This document serves as a collection of best practices, tips, and lessons learne
 
 ### Response Handling
 - **HTML Tag Sanitization**: When processing responses with HTML tags, be aware that the sanitization function in `poellama.main.py` has a specific behavior with unmatched closing tags
-- **Tag Order Fix**: If encountering reversed content order in responses, check the `sanitize_streaming_response` function. The issue is caused by prepending missing opening tags instead of appending them
+- **Tag Order Fix**: If encountering reversed content order in responses, check the `sanitize_streaming_response` function. The issue is caused by prepending missing opening tags instead of appending them. The fix is to change `result = opening_tag + result` to `result += opening_tag` in the function.
+- **Streaming Response Chunking**: For Web-Search model responses, the `fake_stream()` function has been improved to implement paragraph and sentence-based chunking for more natural streaming. This provides a better user experience even when using fake streaming mode.
+- **Extracting Final Responses**: When working with Web-Search responses that include incremental tokens, use the extraction scripts in the `PoeActions` directory to clean up the output and get only the final complete response.
 - **Dollar Amount Notation**: Be careful not to confuse dollar amount notations like `<$800>` with HTML tags when processing responses
 - **Fallback Logic**: Always implement fallback logic when querying specific models, as not all models may be available at all times
 
