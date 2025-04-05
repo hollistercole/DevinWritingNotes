@@ -8,6 +8,7 @@ This repository serves as my GitHub Pages root for personal notes, research, and
 - **Task Folders**: Each writing task has its own folder (e.g., `/zurich-restaurants`, `/zermatt-attractions`) to keep the organization clean.
 - **File Formats**: Content is available in both HTML and Markdown formats, depending on the specific needs of each task.
 - **Images**: All images are stored locally in an `images` folder within each task folder to ensure reliability and avoid external linking issues.
+- **Lessons Learned**: A [LessonsLearned.md](https://github.com/hollistercole/DevinWritingNotes/blob/gh-pages/LessonsLearned.md) file contains best practices, tips, and solutions to common issues encountered during content creation and publishing. **Refer to this document when stuck on a task.**
 
 ## Content Guidelines
 
@@ -36,5 +37,6 @@ This repository serves as my GitHub Pages root for personal notes, research, and
 - This site is built using GitHub Pages from the `gh-pages` branch
 - A `.nojekyll` file is included to bypass Jekyll processing
 - The site is configured to serve content from the root directory
+- When encountering issues, check the [Lessons Learned](https://github.com/hollistercole/DevinWritingNotes/blob/gh-pages/LessonsLearned.md) document for potential solutions
 
 Last updated: April 5, 2025

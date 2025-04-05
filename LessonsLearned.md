@@ -1,0 +1,58 @@
+# Lessons Learned
+
+This document serves as a collection of best practices, tips, and lessons learned while working on various writing and publishing tasks in this repository. Refer to this document when encountering challenges or starting new tasks.
+
+## GitHub Pages
+
+### Configuration
+- **Jekyll Processing**: Adding a `.nojekyll` file to the repository root helps bypass Jekyll processing, which can sometimes cause issues with certain file paths or formats.
+- **Path Configuration**: When GitHub Pages is configured to serve from a specific path (e.g., `/docs`), all content must be placed in that directory to be accessible.
+- **Build Time**: GitHub Pages may take several minutes to build and deploy changes after pushing to the repository.
+
+### Content Organization
+- **Folder Structure**: Organizing content by task in separate folders helps maintain a clean repository structure and makes navigation easier.
+- **Index Files**: Each folder should contain an index.html file to facilitate navigation when accessing the folder URL directly.
+
+## HTML Content
+
+### Best Practices
+- **Mobile Responsiveness**: Always include viewport meta tags and responsive CSS to ensure content displays properly on mobile devices.
+- **Image Optimization**: Compress images before adding them to the repository to improve page load times.
+- **Semantic HTML**: Use proper semantic HTML elements (header, main, footer, etc.) for better accessibility and SEO.
+
+### Common Issues
+- **External Resources**: Avoid relying on externally hosted resources (images, CSS, JavaScript) as they may become unavailable or change over time.
+- **Path References**: Use relative paths for internal links and resources to ensure they work correctly when the site is deployed.
+
+## Markdown Content
+
+### Formatting Tips
+- **Headers**: Use appropriate header levels (# for main title, ## for sections, etc.) to maintain proper document structure.
+- **Images**: Include alt text with all images for accessibility: `![Alt text](./images/image.jpg)`
+- **Links**: Use descriptive link text rather than generic phrases like "click here": `[Zurich Restaurant Guide](./zurich-restaurants.html)`
+
+### GitHub Flavored Markdown
+- **Tables**: Create tables using the pipe syntax for structured data presentation.
+- **Task Lists**: Use `- [ ]` and `- [x]` for creating interactive task lists in planning documents.
+- **Code Blocks**: Use triple backticks with language specification for syntax highlighting.
+
+## Image Handling
+
+### Storage
+- **Local Storage**: Always download and store images locally in an `images` folder within the task directory.
+- **Naming Convention**: Use descriptive, kebab-case filenames for images (e.g., `matterhorn-view.jpg`).
+
+### Optimization
+- **File Format**: Use JPG for photographs, PNG for graphics with transparency, and SVG for vector graphics.
+- **Compression**: Optimize images using tools like TinyPNG or ImageOptim before adding them to the repository.
+
+## Troubleshooting
+
+### Common Issues
+- **404 Errors**: If pages return 404 errors after deployment, check the file path and ensure the file exists in the correct location.
+- **Broken Links**: Regularly test internal links to ensure they correctly point to existing resources.
+- **Display Issues**: Test content on multiple devices and browsers to ensure consistent appearance.
+
+---
+
+This document will be updated as new lessons are learned and best practices are established. Last updated: April 5, 2025.
