@@ -110,15 +110,19 @@ This document serves as a collection of best practices, tips, and lessons learne
 - **Models**: Available models are defined in `models.json` and can be queried using the `/api/tags` endpoint
 - **API Usage**: Send requests to `http://0.0.0.0:8000/api/chat` with appropriate model name and messages
 
-### Perplexity Search Script
-- **Location**: The script is located at `PoeActions/perplexity_search.py`
-- **Usage**: Run the script with a prompt as a command-line argument: `python PoeActions/perplexity_search.py "Your prompt here"`
+### Poe Query CLI Script
+- **Location**: The script is located at `PoeActions/poe_query_cli.py`
+- **Usage**: Run the script with a prompt as a command-line argument: `python PoeActions/poe_query_cli.py "Your prompt here"`
 - **Features**: 
-  - Automatically appends today's date to the query (e.g., "as of [April 5, 2025]")
+  - Works with multiple models via the PoeLocalServer API
   - Uses the Web-Search model by default
+  - Supports both streaming and non-streaming responses
   - Saves responses to a `perplexity_responses` directory with timestamps
   - Displays the response in the console
-- **Example**: `python PoeActions/perplexity_search.py "What are the latest developments in the 2024 US Presidential election?"`
+- **Options**:
+  - `--model` or `-m`: Specify which model to use (e.g., `--model "GPT-4o-Mini"`)
+  - `--stream` or `-s`: Enable streaming mode for real-time responses
+- **Example**: `python PoeActions/poe_query_cli.py --model "Web-Search" --stream "What are the latest developments in AI image generation?"`
 
 ### Response Handling
 - **HTML Tag Sanitization**: When processing responses with HTML tags, be aware that the sanitization function in `poellama.main.py` has a specific behavior with unmatched closing tags
