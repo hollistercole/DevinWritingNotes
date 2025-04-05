@@ -6,7 +6,7 @@ This document serves as a collection of best practices, tips, and lessons learne
 
 ### Configuration
 - **Jekyll Processing**: Adding a `.nojekyll` file to the repository root helps bypass Jekyll processing, which can sometimes cause issues with certain file paths or formats.
-- **Path Configuration**: When GitHub Pages is configured to serve from a specific path (e.g., `/docs`), all content must be placed in that directory to be accessible.
+- **Path Configuration**: This repository is configured to serve content from the root path (`/`), not from a subdirectory like `/docs`. All content should be placed directly in the repository root to be accessible.
 - **Build Time**: GitHub Pages may take several minutes to build and deploy changes after pushing to the repository.
 
 ### Content Organization
