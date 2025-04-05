@@ -9,6 +9,7 @@ This repository serves as my GitHub Pages root for personal notes, research, and
 - **File Formats**: Content is available in both HTML and Markdown formats, depending on the specific needs of each task.
 - **Images**: All images are stored locally in an `images` folder within each task folder to ensure reliability and avoid external linking issues.
 - **Lessons Learned**: A [LessonsLearned.md](https://github.com/hollistercole/DevinWritingNotes/blob/gh-pages/LessonsLearned.md) file contains best practices, tips, and solutions to common issues encountered during content creation and publishing. **Refer to this document when stuck on a task.**
+- **Checklists**: The `Checklists` folder contains markdown files with implementation plans that can be followed step-by-step. These serve as structured guides for completing specific tasks.
 
 ## Content Guidelines
 
