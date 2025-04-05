@@ -41,6 +41,13 @@ This document serves as a collection of best practices, tips, and lessons learne
 ### Storage
 - **Local Storage**: Always download and store images locally in an `images` folder within the task directory.
 - **Naming Convention**: Use descriptive, kebab-case filenames for images (e.g., `matterhorn-view.jpg`).
+- **ImageGrabs Directory**: Use the `/ImageGrabs` directory in the repository root for storing downloaded/captured images that may be used across multiple pages.
+
+### Downloading Images
+- **Unsplash Method**: Use Unsplash.com to find high-quality, freely usable images. Download them directly through the browser and copy them to the appropriate directory.
+- **Browser Screenshots**: For images that are difficult to download directly, use browser screenshots to capture the image and save it locally.
+- **Attribution**: When using images from sources like Unsplash, include proper attribution in the page footer or in a separate credits section.
+- **Reliability**: Always verify downloaded images by checking they appear correctly in the local repository before committing.
 
 ### Optimization
 - **File Format**: Use JPG for photographs, PNG for graphics with transparency, and SVG for vector graphics.
@@ -52,6 +59,19 @@ This document serves as a collection of best practices, tips, and lessons learne
 - **404 Errors**: If pages return 404 errors after deployment, check the file path and ensure the file exists in the correct location.
 - **Broken Links**: Regularly test internal links to ensure they correctly point to existing resources.
 - **Display Issues**: Test content on multiple devices and browsers to ensure consistent appearance.
+
+## Communication
+
+### Status Updates
+- **Regular Updates**: Provide frequent status updates via Slack, especially when working on longer tasks.
+- **Milestone Reporting**: Send updates when reaching key milestones in a task (e.g., "Downloaded all images" or "Completed HTML structure").
+- **Screenshots**: Include screenshots of work in progress when relevant to show visual progress.
+- **Blockers**: Immediately communicate any blockers or issues that might delay completion.
+
+### Context Awareness
+- **Remote Visibility**: Remember that users interacting via Slack cannot see the screen or work in progress unless explicitly shared.
+- **Detailed Explanations**: Provide context with each update about what has been done and what's coming next.
+- **Links**: Always include direct links to completed work so it can be easily accessed and reviewed.
 
 ---
 
