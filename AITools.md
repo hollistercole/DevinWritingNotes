@@ -110,6 +110,31 @@ else:
     print(response.text)
 ```
 
+## Perplexity Streaming Tool
+
+This tool allows command-line based querying of the Perplexity-Sonar-Reasoning model, appending the current date to the prompt for time-sensitive queries and saving the results locally.
+
+### Usage Instructions
+
+1. Ensure the local LLM server is running at `http://localhost:8000` and supports `/chat/completions` with streaming.
+
+2. Run the script with a prompt as a command-line argument:
+
+```bash
+python PoeActions/perplexity_search.py "What is the current state of AI regulation in the US?"
+```
+
+3. The script will:
+   - Append today's date to your prompt.
+   - Stream the response from the Perplexity model.
+   - Save the output in the `./perplexity_responses/` folder with a timestamped filename.
+
+### Notes
+
+- The script uses `httpx` for async HTTP streaming.
+- Logging is enabled for debugging and traceability.
+- Results are printed to the terminal and saved automatically.
+
 ## Poe Query CLI Tool
 
 This tool provides a command-line interface for querying various AI models through the PoeLocalServer API, with support for both streaming and non-streaming responses.
