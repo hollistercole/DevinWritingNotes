@@ -102,6 +102,26 @@ This document serves as a collection of best practices, tips, and lessons learne
 - **Code Quality**: Run black and flake8 on Python code before committing to maintain code quality
 - **Documentation**: Document any Python scripts or tools created for the repository
 
+## AI Tools and APIs
+
+### PoeLocalServer
+- **Setup**: The PoeLocalServer is set up in `~/repos/PoeLocalServer` with its own virtual environment
+- **Running**: Start the server with `source .venv/bin/activate && python -m poellama.main --verbose`
+- **Models**: Available models are defined in `models.json` and can be queried using the `/api/tags` endpoint
+- **API Usage**: Send requests to `http://0.0.0.0:8000/api/chat` with appropriate model name and messages
+
+### Response Handling
+- **HTML Tag Sanitization**: When processing responses with HTML tags, be aware that the sanitization function in `poellama.main.py` has a specific behavior with unmatched closing tags
+- **Tag Order Fix**: If encountering reversed content order in responses, check the `sanitize_streaming_response` function. The issue is caused by prepending missing opening tags instead of appending them
+- **Dollar Amount Notation**: Be careful not to confuse dollar amount notations like `<$800>` with HTML tags when processing responses
+- **Fallback Logic**: Always implement fallback logic when querying specific models, as not all models may be available at all times
+
+### Script Organization
+- **PoeActions Directory**: Store all AI interaction scripts in the `PoeActions` directory
+- **Naming Convention**: Use descriptive names that indicate the model and purpose (e.g., `lea_michele_tour_perplexity.py`)
+- **Response Storage**: Save model outputs with timestamps and model names for easy reference
+- **Error Handling**: Implement proper error handling and logging in all AI interaction scripts
+
 ---
 
 This document will be updated as new lessons are learned and best practices are established. Last updated: April 5, 2025.
