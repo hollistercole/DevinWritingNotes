@@ -82,6 +82,26 @@ This document serves as a collection of best practices, tips, and lessons learne
 - **Detailed Explanations**: Provide context with each update about what has been done and what's coming next.
 - **Links**: Always include direct links to completed work so it can be easily accessed and reviewed.
 
+## Development Tools
+
+### Python Virtual Environment
+- **Location**: A Python virtual environment is set up in the home directory at `~/.venv`
+- **Activation**: Activate the virtual environment using `source ~/.venv/bin/activate`
+- **Deactivation**: When finished, deactivate using the `deactivate` command
+- **Requirements**: All installed packages are documented in `requirements.txt` at the repository root
+- **Installed Tools**:
+  - **black**: Code formatter for consistent Python styling
+  - **flake8**: Linter for identifying code quality issues
+  - **pytest**: Testing framework for Python
+  - **requests/beautifulsoup4**: Libraries for web scraping and HTML parsing
+  - **jupyter**: Interactive notebook environment for Python development
+
+### Best Practices
+- **Always Activate**: Always activate the virtual environment before running Python scripts or installing packages
+- **Update Requirements**: After installing new packages, update requirements.txt with `pip freeze > requirements.txt`
+- **Code Quality**: Run black and flake8 on Python code before committing to maintain code quality
+- **Documentation**: Document any Python scripts or tools created for the repository
+
 ---
 
 This document will be updated as new lessons are learned and best practices are established. Last updated: April 5, 2025.
