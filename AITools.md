@@ -4,19 +4,19 @@ This document provides information about AI extensions and tools available to De
 
 ## Poe Wrapper
 
-The Poe Wrapper provides access to various AI models through Poe.com's API, allowing Devin to leverage different AI capabilities for various tasks.
+The Poe Wrapper provides access to various AI models through Poe.com's API, enabling Devin to leverage different capabilities for a range of tasks.
 
 ### Available Models
 
-The following models are available through the Poe Wrapper:
+The following models are currently prioritized for daily use:
 
-| Model Name | Description | Token Cost | Context Window | Tags |
-|------------|-------------|------------|----------------|------|
-| Claude-3.5-Sonnet | Anthropic's Claude 3.5 Sonnet model | 326 | 200k | latest |
-| Claude-3-Opus | Anthropic's most powerful Claude 3 model | 450 | 200k | powerful |
-| GPT-4o | OpenAI's GPT-4o model | 400 | 128k | latest |
-| Claude-3-Haiku | Anthropic's fastest Claude 3 model | 150 | 200k | fast |
-| Llama-3-70b | Meta's Llama 3 70B parameter model | 200 | 8k | open-source |
+| Model Name                | Description                                                    | Context Window | Tags   |
+|---------------------------|----------------------------------------------------------------|----------------|--------|
+| Web-Search               | Perplexity Sonar with web search capabilities                   | 8k             | latest |
+| Claude-3.7-Sonnet        | Anthropic's Claude 3.7 Sonnet for everyday coding tasks         | 128k           | latest |
+| Claude-3.7-Sonnet-Reasoning | Claude 3.7 Sonnet specialized for narrative writing and reasoning | 128k       | latest |
+| o3-mini-high             | OpenAI's o3 model optimized for high-quality debugging          | 8k             | latest |
+| GPT-4o-Mini              | GPT-4 Mini for quick tests and short responses                  | 8k             | latest |
 
 ### Setup and Launch
 
@@ -28,8 +28,7 @@ To use the Poe Wrapper:
    source .venv/bin/activate
    ./run_server.sh
    ```
-   
-   Alternatively, you can run:
+   Or:
    ```bash
    cd ~/repos/PoeLocalServer
    source .venv/bin/activate
@@ -37,7 +36,7 @@ To use the Poe Wrapper:
    ```
 
 2. **Verify Server Status**:
-   The server will start on `http://0.0.0.0:8000`. You can verify it's running by checking for the startup messages in the terminal.
+   The server will start on `http://0.0.0.0:8000`. Check for startup messages in the terminal to confirm it's running.
 
 ### Using the Poe Wrapper
 
@@ -45,40 +44,32 @@ To use the Poe Wrapper:
 
 When creating scripts that use the Poe Wrapper:
 
-1. **Script Location**: 
-   - Place Python scripts in the `PoeActions` directory at the root of your project
-   - Use descriptive filenames that indicate the model and purpose (e.g., `claude_research_climate.py`)
-
-2. **Output Storage**:
-   - Save model outputs to appropriate locations based on the content type:
-     - For general research: Save in the `PoeActions` directory with a timestamp
-     - For project-specific content: Save in the relevant project directory
-     - For content that will be published: Save directly to the appropriate location in the project structure
+- **Script Location**: Place Python scripts in the `PoeActions` directory at the project root. Use descriptive filenames indicating model and purpose (e.g., `claude_research_climate.py`).
+- **Output Storage**:
+  - General research: Save in `PoeActions` with a timestamp.
+  - Project-specific content: Save in the relevant project directory.
+  - Content for publishing: Save to the designated location in the project structure.
 
 #### Making API Requests
 
-Here's a template for making requests to the Poe Wrapper:
+Example template for making requests:
 
 ```python
 import requests
 import json
 
-# Define the API endpoint
 API_URL = "http://0.0.0.0:8000/api/chat"
 
-# Define the request payload
 payload = {
-    "model": "MODEL_NAME",  # e.g., "Claude-3.5-Sonnet", "GPT-4o", etc.
+    "model": "MODEL_NAME",  # e.g., "Claude-3.5-Sonnet"
     "messages": [
         {"role": "user", "content": "Your prompt or question here"}
     ],
-    "stream": False  # Set to True for streaming responses
+    "stream": False
 }
 
-# Make the API request
 response = requests.post(API_URL, json=payload)
 
-# Process the response
 if response.status_code == 200:
     result = response.json()
     if "message" in result:
@@ -119,52 +110,99 @@ else:
     print(response.text)
 ```
 
-### Best Practices
+## Poe Query CLI Tool
 
-1. **Model Selection**:
-   - Use Claude models for nuanced reasoning, creative writing, and detailed analysis
-   - Use GPT models for code generation, technical documentation, and general knowledge
-   - Use Llama for tasks where an open-source model is preferred
+This tool provides a command-line interface for querying various AI models through the PoeLocalServer API, with support for both streaming and non-streaming responses.
 
-2. **Prompt Engineering**:
-   - Be specific about the format you want (Markdown, HTML, JSON, etc.)
-   - Provide context and examples when needed
-   - Break complex tasks into smaller, focused prompts
+### Usage Instructions
 
-3. **Error Handling**:
-   - Always implement proper error handling for API requests
-   - Have fallback options if a specific model is unavailable
-   - Consider implementing retries with exponential backoff for transient errors
+1. Ensure the PoeLocalServer is running at `http://localhost:8000`.
 
-4. **Resource Management**:
-   - Be mindful of token usage, especially for larger models
-   - Use streaming for long responses when appropriate
-   - Consider batching multiple related queries into a single request when possible
+2. Run the script with a prompt as a command-line argument:
 
-5. **Output Processing**:
-   - Validate and sanitize model outputs before using them in production
-   - Implement parsing logic for structured outputs (JSON, tables, etc.)
-   - Consider post-processing steps for formatting consistency
+```bash
+python PoeActions/poe_query_cli.py "What is the current state of AI regulation in the US?"
+```
 
-### Troubleshooting
+3. Specify a model (default is Web-Search):
 
-If you encounter issues with the Poe Wrapper:
+```bash
+python PoeActions/poe_query_cli.py --model "GPT-4o-Mini" "What are the latest developments in AI image generation?"
+```
 
-1. **Connection Issues**:
-   - Verify the server is running at `http://0.0.0.0:8000`
-   - Check that you're in the correct virtual environment
-   - Ensure the `.env` file has valid API keys
+4. Enable streaming mode for real-time responses:
 
-2. **Model Availability**:
-   - Confirm the model you're requesting is available in `models.json`
-   - Check for any rate limiting messages in the server logs
-   - Try a different model if one is consistently unavailable
+```bash
+python PoeActions/poe_query_cli.py --stream --model "Web-Search" "What are the latest developments in AI?"
+```
 
-3. **Response Quality**:
-   - Refine your prompt for better results
-   - Consider using a more capable model for complex tasks
-   - Break down complex requests into simpler components
+### Features
+
+- **Multiple Model Support**: Works with any model available in the PoeLocalServer
+- **Response Format Handling**: Properly parses different response formats from various models
+- **Streaming Mode**: Option to stream responses in real-time
+- **Response Storage**: Saves responses to the `./perplexity_responses/` folder with model name and timestamp
+- **Error Handling**: Robust error handling for various API response scenarios
+
+### Notes
+
+- The script uses `requests` for HTTP communication
+- Special handling for Web-Search model responses to clean up incremental tokens
+- Results are printed to the terminal and saved automatically
 
 ---
 
-This document will be updated as new AI tools and extensions become available. Last updated: April 5, 2025.
+### Best Practices
+
+1. **Choose the Right Model for the Task**:
+   - **Web-Search (Perplexity)**: Best for timely, web-relevant queries and real-time summaries.
+   - **Claude-3.7-Sonnet**: Ideal for everyday coding, refactoring, and walkthroughs.
+   - **Claude-3.7-Sonnet-Reasoning**: Use for complex writing, outlining, and structured reasoning.
+   - **o3-mini-high**: Reserved for challenging debugging and deep technical inspections.
+   - **GPT-4o-Mini**: Great for unit tests, fast iterations, and short-form replies.
+
+2. **Prompt Engineering**:
+   - Be explicit about format expectations (e.g., Markdown, JSON, bullet points).
+   - Include relevant context and constraints.
+   - When in doubt, scaffold multi-step tasks with intermediate prompts.
+
+3. **Code & Script Organization**:
+   - Use consistent filenames with purpose and model (e.g., `sonnet_debug_parser.py`).
+   - Save outputs with timestamps or versioned filenames for traceability.
+
+4. **Error Handling & Robustness**:
+   - Check response validity before processing.
+   - Handle model downtimes gracefully.
+   - Include retry logic where appropriate.
+
+5. **Performance Considerations**:
+   - Prefer lightweight models like GPT-4o-Mini for rapid prototyping.
+   - Use streaming for longer queries to avoid timeouts and improve UX.
+   - Minimize redundant prompts; reuse validated responses when possible.
+
+6. **Output Hygiene**:
+   - Sanitize and review model outputs before using in code or publication.
+   - Implement parsers for structured formats.
+   - Normalize responses for consistency across tools and models.
+
+
+
+1. **Connection Issues**:
+   - Check the server is running at `http://0.0.0.0:8000` or `http://localhost:8000`
+   - Ensure the correct virtual environment is active.
+   - Verify `.env` file contains valid API keys.
+
+2. **Model Availability**:
+   - Ensure the model is listed in `models.json`.
+   - Look for rate limiting in server logs.
+   - Switch to another model if needed.
+
+3. **Response Quality**:
+   - Refine prompts.
+   - Choose a more capable model for complex tasks.
+   - Simplify or segment complex queries.
+
+---
+
+_This document will be updated as new tools and extensions become available._
+**Last updated:** April 5, 2025.
