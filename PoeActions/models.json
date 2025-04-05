@@ -1,0 +1,169 @@
+{
+    "subscription_cost": {
+        "monthly_fee": 16.67,
+        "tokens_per_month": 1000000
+    },
+    "models": [
+        {
+            "name": "Perplexity-Sonar-Reasoning",
+            "bot_name": "Web-Search",
+            "token_cost": 15,
+            "dollar_cost": 0.00025,
+            "context_window": "8k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "Web search capability, currently in testing"
+
+        },
+        {
+            "name": "Five Women of Jesus",
+            "bot_name": "FiveWomenOfJesus",
+            "token_cost": 326,
+            "dollar_cost": 0.00544,
+            "context_window": "128k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "Custom Bot for the Five Women of Jesus"
+        },
+        {
+            "name": "Claude-3.7-Sonnet",
+            "bot_name": "Claude-3.7-Sonnet",
+            "token_cost": 326,
+            "dollar_cost": 0.00544,
+            "context_window": "128k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "Anthropic's Claude 3.7 Sonnet model"
+        },
+        {
+            "name": "Claude-3.7-Sonnet-Reasoning",
+            "bot_name": "Claude-3.7-Sonnet-Reasoning",
+            "token_cost": 326,
+            "dollar_cost": 0.00544,
+            "context_window": "128k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "Anthropic's Claude 3.7 Sonnet Reasoning model"
+        },
+        {
+            "name": "Claude-3.5-Sonnet",
+            "bot_name": "Claude-3.5-Sonnet",
+            "token_cost": 326,
+            "dollar_cost": 0.00544,
+            "context_window": "200k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "Anthropic's Claude 3.5 Sonnet model"
+        },
+        {
+            "name": "GPT-4o",
+            "bot_name": "GPT-4o",
+            "token_cost": 272,
+            "dollar_cost": 0.00454,
+            "context_window": "8k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "OpenAI's GPT-4 model"
+        },
+        {
+            "name": "Gemini-2.0-Flash",
+            "bot_name": "Gemini-2.0-Flash",
+            "token_cost": 20,
+            "dollar_cost": 0.00033,
+            "context_window": "32k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "Google's Gemini 2.0 Flash model"
+        },
+        {
+            "name": "Deepseek-V3-FW",
+            "bot_name": "Deepseek-V3-FW",
+            "token_cost": 300,
+            "dollar_cost": 0.00501,
+            "context_window": "32k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "DeepSeek's V3 Foundation model"
+        },
+        {
+            "name": "Grok-2",
+            "bot_name": "Grok-2",
+            "token_cost": 228,
+            "dollar_cost": 0.00381,
+            "context_window": "8k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "xAI's Grok 2 model"
+        },
+        {
+            "name": "o3-mini",
+            "bot_name": "o3-mini",
+            "token_cost": 264,
+            "dollar_cost": 0.00441,
+            "context_window": "8k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "OpenAI's o3 model optimized for speed"
+        },
+        {
+            "name": "o3-mini-high",
+            "bot_name": "o3-mini-high",
+            "token_cost": 637,
+            "dollar_cost": 0.01063,
+            "context_window": "8k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "OpenAI's o3 model optimized for quality"
+        },
+        {
+            "name": "GPT-4o-Mini",
+            "bot_name": "GPT-4o-Mini",
+            "token_cost": 15,
+            "dollar_cost": 0.00025,
+            "context_window": "8k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "OpenAI's GPT-4 Mini model"
+        },
+        {
+            "name": "DeepSeek-R1-FW",
+            "bot_name": "DeepSeek-R1-FW",
+            "token_cost": 200,
+            "dollar_cost": 0.00334,
+            "context_window": "32k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "DeepSeek's R1 Foundation model"
+        },
+        {
+            "name": "GPT-4o-128k",
+            "bot_name": "GPT-4o-128k",
+            "token_cost": 317,
+            "dollar_cost": 0.00529,
+            "context_window": "128k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "OpenAI's GPT-4 with extended context"
+        },
+        {
+            "name": "Claude-3.5-Sonnet-200k",
+            "bot_name": "Claude-3.5-Sonnet-200k",
+            "token_cost": 355,
+            "dollar_cost": 0.00593,
+            "context_window": "200k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "Anthropic's Claude 3.5 Sonnet with extended context"
+        },
+        {
+            "name": "Gemini-2.0-Pro",
+            "bot_name": "Gemini-2.0-Pro",
+            "token_cost": 0,
+            "dollar_cost": 0.00000,
+            "context_window": "32k",
+            "tags": ["latest"],
+            "available": true,
+            "description": "Google's Gemini 2.0 Pro model"
+        }
+    ]
+}
