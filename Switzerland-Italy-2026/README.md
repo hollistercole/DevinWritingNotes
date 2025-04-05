@@ -14,21 +14,28 @@ This folder contains research, planning materials, and travel guides for our fam
 - Hiking enthusiast
 - Enjoys cafes and nice dinners
 - Primary trip planner
+- Interested in scenic vistas and historical sites
 
 ### Donna (Mom, 54)
 - Chocolate and wine enthusiast
 - Enjoys cafes and nice dinners
 - Cultural experiences
+- Interested in specialty local goods and products
+- Enjoys window shopping and boutique districts
 
 ### Caleb (21)
 - Adventure activities
 - Outdoor experiences
 - May enjoy more physically demanding activities in Interlaken
+- Adventurous eater interested in local cuisine specialties
+- Open to unique cultural experiences
 
 ### Ryan (19)
 - Gaming and anime fan
 - Prefers less physically demanding activities
 - Digital entertainment
+- Open to e-scooter tours and technology-related attractions
+- Interested in scenic vistas that don't require extensive hiking
 
 ## Trip Planning Approach
 
