@@ -110,6 +110,16 @@ This document serves as a collection of best practices, tips, and lessons learne
 - **Models**: Available models are defined in `models.json` and can be queried using the `/api/tags` endpoint
 - **API Usage**: Send requests to `http://0.0.0.0:8000/api/chat` with appropriate model name and messages
 
+### Perplexity Search Script
+- **Location**: The script is located at `PoeActions/perplexity_search.py`
+- **Usage**: Run the script with a prompt as a command-line argument: `python PoeActions/perplexity_search.py "Your prompt here"`
+- **Features**: 
+  - Automatically appends today's date to the query (e.g., "as of [April 5, 2025]")
+  - Uses the Web-Search model by default
+  - Saves responses to a `perplexity_responses` directory with timestamps
+  - Displays the response in the console
+- **Example**: `python PoeActions/perplexity_search.py "What are the latest developments in the 2024 US Presidential election?"`
+
 ### Response Handling
 - **HTML Tag Sanitization**: When processing responses with HTML tags, be aware that the sanitization function in `poellama.main.py` has a specific behavior with unmatched closing tags
 - **Tag Order Fix**: If encountering reversed content order in responses, check the `sanitize_streaming_response` function. The issue is caused by prepending missing opening tags instead of appending them. The fix is to change `result = opening_tag + result` to `result += opening_tag` in the function.
