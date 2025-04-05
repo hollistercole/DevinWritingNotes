@@ -16,9 +16,17 @@ This document serves as a collection of best practices, tips, and lessons learne
 ## HTML Content
 
 ### Best Practices
+- **Mobile-First Design**: Design pages with mobile devices as the primary target, then enhance for larger screens. Mobile will be the primary viewing mode for most users.
 - **Mobile Responsiveness**: Always include viewport meta tags and responsive CSS to ensure content displays properly on mobile devices.
+- **Responsive Layouts**: Use flexible grid layouts, relative units (%, em, rem), and media queries to ensure content adapts to different screen sizes.
+- **Touch-Friendly UI**: Make buttons and interactive elements large enough (minimum 44x44px) and properly spaced for touch interaction.
 - **Image Optimization**: Compress images before adding them to the repository to improve page load times.
 - **Semantic HTML**: Use proper semantic HTML elements (header, main, footer, etc.) for better accessibility and SEO.
+
+### Testing
+- **Mobile Preview**: Test all pages in mobile view using browser developer tools to verify layouts work properly.
+- **Responsive Testing**: Check pages at multiple breakpoints to ensure content flows appropriately at all screen sizes.
+- **Performance Testing**: Verify that pages load quickly on mobile devices and that images are appropriately sized.
 
 ### Common Issues
 - **External Resources**: Avoid relying on externally hosted resources (images, CSS, JavaScript) as they may become unavailable or change over time.
@@ -41,7 +49,7 @@ This document serves as a collection of best practices, tips, and lessons learne
 ### Storage
 - **Local Storage**: Always download and store images locally in an `images` folder within the task directory.
 - **Naming Convention**: Use descriptive, kebab-case filenames for images (e.g., `matterhorn-view.jpg`).
-- **ImageGrabs Directory**: Use the `/ImageGrabs` directory in the repository root for storing downloaded/captured images that may be used across multiple pages.
+- **ImageGrabs Directory**: Use the `/ImageGrabs` directory in the repository root as temporary storage for downloaded/captured images. Images should ultimately be copied to their appropriate organizational location in the hierarchy.
 
 ### Downloading Images
 - **Unsplash Method**: Use Unsplash.com to find high-quality, freely usable images. Download them directly through the browser and copy them to the appropriate directory.
