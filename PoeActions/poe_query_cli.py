@@ -91,8 +91,17 @@ def get_response(payload):
         
         if response.status_code == 200:
             result = response.json()
+            
             if "choices" in result and result["choices"]:
                 content = result["choices"][0]["message"]["content"]
+                return content
+                
+            elif "message" in result and "content" in result["message"]:
+                content = result["message"]["content"]
+                
+                if payload["model"] == "Web-Search" and "Searching..." in content:
+                    return clean_websearch_response(content)
+                
                 return content
             else:
                 return f"Error: Unexpected response format: {json.dumps(result)}"
@@ -101,6 +110,39 @@ def get_response(payload):
             
     except Exception as e:
         return f"Request error: {str(e)}"
+
+def clean_websearch_response(content):
+    """
+    Clean up Web-Search response by removing incremental tokens and searching messages.
+    
+    Args:
+        content (str): The raw Web-Search response
+        
+    Returns:
+        str: The cleaned response
+    """
+    lines = content.split('\n')
+    clean_lines = []
+    
+    seen_content = set()
+    for line in reversed(lines):
+        if not line or line.startswith("Searching"):
+            continue
+            
+        stripped = line.strip()
+        is_duplicate = False
+        for existing in seen_content:
+            if stripped in existing or existing in stripped:
+                is_duplicate = True
+                break
+                
+        if not is_duplicate:
+            clean_lines.append(line)
+            seen_content.add(stripped)
+    
+    clean_lines.reverse()
+    
+    return '\n'.join(clean_lines)
 
 def stream_response(payload):
     """
