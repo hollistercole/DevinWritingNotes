@@ -156,41 +156,61 @@ def stream_response(payload):
     """
     try:
         final_response = ""
+        model = payload["model"]
         
         with requests.post(API_URL, json=payload, stream=True, timeout=120) as response:
             if response.status_code != 200:
                 return f"Error: Received status code {response.status_code}\n{response.text}"
             
             for line in response.iter_lines():
-                if line:
-                    line = line.decode('utf-8')
-                    if line.startswith("data: "):
-                        data = line[6:]  # Remove "data: " prefix
+                if not line:
+                    continue
+                    
+                line = line.decode('utf-8')
+                if not line.startswith("data: "):
+                    continue
+                    
+                data = line[6:]  # Remove "data: " prefix
+                
+                if data == "[DONE]":
+                    break
+                
+                try:
+                    chunk = json.loads(data)
+                    
+                    if "choices" in chunk and chunk["choices"]:
+                        choice = chunk["choices"][0]
                         
-                        if data == "[DONE]":
+                        if "delta" in choice and "content" in choice["delta"]:
+                            content = choice["delta"]["content"]
+                            final_response += content
+                            print(content, end="", flush=True)
+                        
+                        if choice.get("finish_reason") == "stop":
                             break
+                    
+                    elif "message" in chunk and "content" in chunk["message"]:
+                        content = chunk["message"]["content"]
                         
-                        try:
-                            chunk = json.loads(data)
-                            if "choices" in chunk and chunk["choices"]:
-                                choice = chunk["choices"][0]
-                                
-                                if "delta" in choice and "content" in choice["delta"]:
-                                    content = choice["delta"]["content"]
-                                    final_response += content
-                                    
-                                    print(content, end="", flush=True)
-                                
-                                if choice.get("finish_reason") == "stop":
-                                    break
-                                    
-                        except json.JSONDecodeError:
-                            continue
+                        if model == "Web-Search" and "Searching..." in content:
+                            content = clean_websearch_response(content)
+                        
+                        final_response = content  # Replace with full content
+                        print(content, flush=True)
+                        break
+                        
+                except json.JSONDecodeError:
+                    continue
         
         print()  # Add a newline after streaming completes
+        
+        if model == "Web-Search" and "Searching..." in final_response:
+            final_response = clean_websearch_response(final_response)
+            
         return final_response
         
     except Exception as e:
+        print(f"\nStreaming error: {str(e)}")
         return f"Streaming error: {str(e)}"
 
 def main():
