@@ -20,7 +20,7 @@ This document serves as a collection of best practices, tips, and lessons learne
 - **Mobile Responsiveness**: Always include viewport meta tags and responsive CSS to ensure content displays properly on mobile devices.
 - **Responsive Layouts**: Use flexible grid layouts, relative units (%, em, rem), and media queries to ensure content adapts to different screen sizes.
 - **Touch-Friendly UI**: Make buttons and interactive elements large enough (minimum 44x44px) and properly spaced for touch interaction.
-- **Mobile Button Layout**: For navigation buttons on mobile, use `display: block; width: 100%;` and consistent vertical margins (e.g., `margin-bottom: 10px`) to ensure proper stacking and spacing.
+- **Mobile Button Layout**: For navigation buttons on mobile, use `display: block; width: 85%;` with `margin: 0 auto` for centered alignment and consistent vertical spacing (e.g., `margin-bottom: 10px`). Using 85% width instead of 100% creates better visual spacing around buttons.
 - **Image Optimization**: Compress images before adding them to the repository to improve page load times.
 - **Semantic HTML**: Use proper semantic HTML elements (header, main, footer, etc.) for better accessibility and SEO.
 
