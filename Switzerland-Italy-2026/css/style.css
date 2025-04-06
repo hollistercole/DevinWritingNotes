@@ -47,6 +47,62 @@ h2 {
     overflow: hidden;
 }
 
+/* Person section styles */
+.person-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.person-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.person-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.person-name {
+    font-size: 1.8em;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.person-interests {
+    font-style: italic;
+    color: #7f8c8d;
+    margin: 5px 0 0 0;
+}
+
+/* Attraction styles */
+.attraction {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+}
+
+.attraction h3 {
+    margin-top: 0;
+    color: #3498db;
+}
+
 /* Image styles */
 .placeholder-image {
     width: 100%;
@@ -92,11 +148,12 @@ h2 {
 
 /* Info box styles */
 .info {
-    margin-top: 20px;
+    margin-top: 15px;
     background-color: #f8f9fa;
-    padding: 15px;
+    padding: 12px;
     border-radius: 5px;
     border-left: 4px solid #3498db;
+    font-size: 0.9em;
 }
 
 .highlight {
@@ -123,6 +180,21 @@ footer {
         margin-left: 0;
         margin-bottom: 20px;
     }
+    
+    .person-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5em;
+    }
+    
+    .person-name {
+        font-size: 1.5em;
+    }
+    
+    .nav-links a {
+        width: 85%;
+        display: inline-block;
+    }
 }
 
 /* Destination-specific color schemes */
@@ -144,6 +216,12 @@ footer {
 .interlaken-theme .info {
     border-left-color: #3498db;
 }
+.interlaken-theme .attraction {
+    border-left-color: #3498db;
+}
+.interlaken-theme .attraction h3 {
+    color: #3498db;
+}
 
 /* Zermatt - Red */
 .zermatt-theme h1 {
@@ -160,6 +238,12 @@ footer {
 }
 .zermatt-theme .info {
     border-left-color: #e74c3c;
+}
+.zermatt-theme .attraction {
+    border-left-color: #e74c3c;
+}
+.zermatt-theme .attraction h3 {
+    color: #e74c3c;
 }
 
 /* Milan - Purple */
@@ -178,6 +262,12 @@ footer {
 .milan-theme .info {
     border-left-color: #9b59b6;
 }
+.milan-theme .attraction {
+    border-left-color: #9b59b6;
+}
+.milan-theme .attraction h3 {
+    color: #9b59b6;
+}
 
 /* Venice - Teal */
 .venice-theme h1 {
@@ -194,4 +284,10 @@ footer {
 }
 .venice-theme .info {
     border-left-color: #2980b9;
+}
+.venice-theme .attraction {
+    border-left-color: #2980b9;
+}
+.venice-theme .attraction h3 {
+    color: #2980b9;
 }
