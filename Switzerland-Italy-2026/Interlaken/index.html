@@ -3,132 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Interlaken - Switzerland-Italy Trip 2026</title>
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .person-section {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-            padding: 25px;
-            overflow: hidden;
-        }
-        
-        .person-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .person-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #e74c3c;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 20px;
-            color: white;
-            font-size: 2em;
-            font-weight: bold;
-        }
-        
-        .person-name {
-            font-size: 1.8em;
-            margin: 0;
-            color: #2c3e50;
-        }
-        
-        .person-interests {
-            font-style: italic;
-            color: #7f8c8d;
-            margin: 5px 0 0 0;
-        }
-        
-        .attraction {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid #3498db;
-        }
-        
-        .attraction h3 {
-            margin-top: 0;
-            color: #3498db;
-        }
-        
-        .attraction-image {
-            float: right;
-            width: 40%;
-            margin-left: 20px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .info {
-            margin-top: 15px;
-            background-color: #f0f4f8;
-            padding: 12px;
-            border-radius: 5px;
-            border-left: 4px solid #e74c3c;
-            font-size: 0.9em;
-        }
-        
-        .highlight {
-            background-color: #fffacd;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        
-        @media (max-width: 768px) {
-            .attraction-image {
-                float: none;
-                width: 100%;
-                margin-left: 0;
-                margin-bottom: 15px;
-            }
-            
-            .person-avatar {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5em;
-            }
-            
-            .person-name {
-                font-size: 1.5em;
-            }
-            
-            .nav-links a {
-                width: 85%;
-                display: inline-block;
-            }
-        }
-    </style>
 </head>
 <body class="interlaken-theme">
     <header>
         <h1>Interlaken, Switzerland</h1>
         <p>Personalized travel recommendations for our family trip in June 2026</p>
     </header>
-
+    
     <main>
         <div class="nav-links">
             <a href="../index.html">Back to Trip Overview</a>
         </div>
-
-        <div class="content-section">
+        
+        <section class="content-section">
             <h2>About Interlaken</h2>
             <p>Nestled between Lake Thun and Lake Brienz in the heart of the Swiss Alps, Interlaken is known as the adventure capital of Switzerland. With its stunning mountain scenery, crystal-clear lakes, and endless outdoor activities, it's the perfect destination for our family with varied interests.</p>
             <p>We've created personalized "Top 5" lists for each family member based on their specific interests. Scroll down to find activities tailored just for you!</p>
-        </div>
-
+        </section>
+        
         <!-- Jason's Section -->
         <section class="person-section" id="jason">
             <div class="person-header">
@@ -139,75 +33,70 @@
                 </div>
             </div>
             
-            <div class="attraction">
+            <article class="attraction">
                 <h3>1. Harder Kulm Trail & Viewpoint</h3>
                 <img src="images/harder-kulm.jpg" alt="Harder Kulm viewpoint overlooking Interlaken" class="attraction-image">
                 <p>This moderate 4 km trail starts from Interlaken Ost and leads to a spectacular viewpoint offering panoramic views of Interlaken and the surrounding lakes. The hike takes about 1.5 hours each way through beautiful forest terrain with increasingly stunning views as you ascend.</p>
                 <p>At the top, you'll find the "Two Lakes Bridge" viewing platform extending out over the edge, providing unobstructed views of Lake Thun, Lake Brienz, and the mountains beyond including Eiger, Mönch, and Jungfrau.</p>
-                
                 <div class="info">
                     <p><strong>Difficulty:</strong> Moderate</p>
                     <p><strong>Duration:</strong> 3 hours round trip (hiking)</p>
                     <p><strong>Alternative:</strong> Funicular railway available if you prefer not to hike</p>
                     <p><strong>Tip:</strong> <span class="highlight">Go early in the morning for the best light and fewer crowds. The Harder Kulm restaurant at the top offers traditional Swiss cuisine with incredible views.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>2. Schynige Platte Ridge Trail</h3>
-                <img src="images/schynige-platte.jpg" alt="Schynige Platte Ridge Trail with mountain views" class="attraction-image">
-                <p>This spectacular 6 km loop trail offers some of the most breathtaking views of the Eiger, Mönch, and Jungfrau peaks. The trailhead is accessible via a vintage cogwheel train from Wilderswil (near Interlaken), which is an experience in itself as it climbs through alpine meadows.</p>
-                <p>The trail features stunning panoramic views, alpine flowers (especially beautiful in June), and a botanical alpine garden with over 600 plant species. The relatively flat terrain along the ridge makes this hike accessible while still offering world-class mountain scenery.</p>
-                
+            <article class="attraction">
+                <h3>2. Schynige Platte Alpine Garden & Hiking Trail</h3>
+                <img src="images/schynige-platte.jpg" alt="Schynige Platte Alpine Garden with mountain views" class="attraction-image">
+                <p>Take the historic cogwheel train from Wilderswil to Schynige Platte (2,076m) for access to some of the region's most spectacular hiking trails and the oldest Alpine garden in Switzerland, featuring over 600 plant species.</p>
+                <p>The Panorama Trail offers breathtaking views of the Eiger, Mönch, and Jungfrau mountains, as well as both lakes. The well-maintained paths make this accessible for hikers of various abilities, with options ranging from 1-4 hours.</p>
                 <div class="info">
-                    <p><strong>Difficulty:</strong> Easy to moderate</p>
-                    <p><strong>Duration:</strong> 2.5 hours (hiking time)</p>
-                    <p><strong>Best Time:</strong> Morning, when visibility is typically best</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Bring binoculars to spot wildlife and get close-up views of distant peaks. The historic mountain hotel offers a great lunch spot with traditional Swiss cuisine.</span></p>
+                    <p><strong>Train:</strong> Historic cogwheel railway from Wilderswil (25 min from Interlaken)</p>
+                    <p><strong>Operating:</strong> Late May to late October (perfect for our June visit)</p>
+                    <p><strong>Highlights:</strong> Alpine garden, panoramic mountain views, traditional mountain restaurant</p>
+                    <p><strong>Tip:</strong> <span class="highlight">The first train up is usually less crowded. Bring layers as the weather can change quickly at this elevation.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>3. Niederhorn Ridge Trail</h3>
-                <img src="images/niederhorn.jpg" alt="Niederhorn Ridge with views of Lake Thun" class="attraction-image">
-                <p>This flexible trail (4.5 km to 11 km depending on your preference) offers stunning views from the Güggisgrat ridge overlooking Lake Thun. The trail can be customized based on your energy level for the day, with several points where you can shorten or extend the hike.</p>
-                <p>What makes this trail special is the combination of alpine scenery with lake views, and the excellent chances of spotting local wildlife including ibex and marmots. The ridge walk provides 360-degree panoramic views throughout much of the hike.</p>
-                
+            <article class="attraction">
+                <h3>3. Niederhorn Hiking Trails</h3>
+                <img src="images/niederhorn.jpg" alt="View from Niederhorn hiking trail" class="attraction-image">
+                <p>The Niederhorn mountain offers some of the most accessible yet rewarding hiking in the region. Take the cable car from Beatenberg to the summit at 1,950m, where several well-marked trails begin with spectacular views of Lake Thun and the surrounding Alps.</p>
+                <p>The Gemmenalphorn loop trail is particularly recommended, offering ridge walking with panoramic views and a good chance to spot local wildlife including ibex and marmots.</p>
                 <div class="info">
-                    <p><strong>Difficulty:</strong> Moderate</p>
-                    <p><strong>Duration:</strong> 2-4 hours depending on route chosen</p>
-                    <p><strong>Access:</strong> Cable car from Beatenberg to Niederhorn summit</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Consider taking the scooter ride down the mountain after your hike for a thrilling descent. Early morning offers the best chance to spot wildlife.</span></p>
+                    <p><strong>Access:</strong> Cable car from Beatenberg (15 min bus from Interlaken)</p>
+                    <p><strong>Trail Options:</strong> Various difficulties from easy 1-hour walks to challenging full-day hikes</p>
+                    <p><strong>Wildlife:</strong> Good opportunity to spot Alpine wildlife</p>
+                    <p><strong>Tip:</strong> <span class="highlight">The early morning offers the best chance to see wildlife and enjoy clear views before any afternoon clouds roll in.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
+            <article class="attraction">
                 <h3>4. Interlaken's Old Town & Monastery</h3>
                 <img src="images/interlaken-old-town.jpg" alt="Historic buildings in Interlaken's Old Town" class="attraction-image">
                 <p>Explore the charming streets of Interlaken's historic center, where you can find well-preserved buildings dating back several centuries. The Interlaken Monastery and Castle, dating back to 1133, offers a fascinating glimpse into the town's medieval past.</p>
                 <p>The monastery complex includes beautiful gardens, historic architecture, and exhibits on local history. Nearby, you can stroll along the Aare River and enjoy the peaceful atmosphere away from the more touristy areas of town.</p>
-                
                 <div class="info">
-                    <p><strong>Duration:</strong> 2-3 hours at a leisurely pace</p>
-                    <p><strong>Highlights:</strong> Monastery, castle, historic buildings, Aare River</p>
                     <p><strong>Location:</strong> Central Interlaken, easily walkable</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Visit the Japanese Garden within the monastery grounds for a peaceful retreat, and check if any cultural events are happening during our visit in June 2026.</span></p>
+                    <p><strong>Highlights:</strong> 12th-century monastery, historic buildings, Aare River promenade</p>
+                    <p><strong>Duration:</strong> 2-3 hours at a leisurely pace</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Visit the Japanese Garden within the monastery grounds for a peaceful retreat, and don't miss the small museum with exhibits on local history.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>5. Mt. Niesen - "The Swiss Pyramid"</h3>
-                <img src="images/mt-niesen.jpg" alt="Mt. Niesen with its distinctive pyramid shape" class="attraction-image">
-                <p>Known as the "Swiss Pyramid" due to its distinctive shape, Mt. Niesen offers a unique hiking experience with some of the most spectacular views in the region. The summit can be reached by funicular, but the trail connecting the top to the middle station provides a quieter, more peaceful hiking experience.</p>
-                <p>From the summit at 2,362 meters (7,749 feet), you'll enjoy panoramic views of Lake Thun and over 200 mountain peaks. The distinctive pyramid shape of the mountain creates unique perspectives and photo opportunities.</p>
-                
+            <article class="attraction">
+                <h3>5. St. Beatus Caves & Waterfall</h3>
+                <img src="images/st-beatus-caves.jpg" alt="Entrance to St. Beatus Caves with waterfall" class="attraction-image">
+                <p>Located on the shores of Lake Thun, the St. Beatus Caves offer a fascinating journey through a kilometer-long cave system with impressive stalactites, stalagmites, underground streams, and chambers. According to legend, a dragon once lived here before being driven out by the Irish monk St. Beatus.</p>
+                <p>The site also features a spectacular waterfall cascading down the cliff face at the cave entrance, and the hiking trail to reach the caves offers stunning views over Lake Thun.</p>
                 <div class="info">
-                    <p><strong>Difficulty:</strong> Moderate to challenging</p>
-                    <p><strong>Duration:</strong> 2-3 hours (partial hike)</p>
-                    <p><strong>Access:</strong> Funicular from Mülenen (accessible by train from Interlaken)</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Consider having lunch at the summit restaurant with its panoramic terrace. For a unique experience, hike down from the middle station rather than taking the funicular all the way.</span></p>
+                    <p><strong>Location:</strong> 15 minutes from Interlaken by car or bus</p>
+                    <p><strong>Open:</strong> Mid-March to late October (perfect for our June visit)</p>
+                    <p><strong>Duration:</strong> 1-hour cave tour plus time for the museum and restaurant</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Combine with a boat trip on Lake Thun for a perfect day out. The caves maintain a constant cool temperature of about 8-10°C, so bring a light jacket even in summer.</span></p>
                 </div>
-            </div>
+            </article>
         </section>
         
         <!-- Donna's Section -->
@@ -220,75 +109,70 @@
                 </div>
             </div>
             
-            <div class="attraction">
+            <article class="attraction">
                 <h3>1. Funky Chocolate Club Workshop</h3>
                 <img src="images/funky-chocolate.jpg" alt="Chocolate making workshop at Funky Chocolate Club" class="attraction-image">
-                <p>Indulge in a hands-on chocolate-making workshop at the Funky Chocolate Club, where you'll create your own chocolate masterpieces under the guidance of experienced chocolatiers. This interactive experience allows you to work with 400 grams of premium Swiss chocolate, melting and decorating it to your taste.</p>
-                <p>Learn about the history and production of Swiss chocolate while crafting your own unique creations to take home as delicious souvenirs. The workshop includes all materials and packaging for your chocolate creations.</p>
-                
+                <p>Indulge in a hands-on chocolate-making workshop at the Funky Chocolate Club, where you'll create your own chocolate masterpieces under the guidance of experienced chocolatiers. Learn about the bean-to-bar process and the special characteristics of Swiss chocolate.</p>
+                <p>The 75-minute workshop includes all materials and packaging to take your creations home. You'll also get to taste various premium Swiss chocolates and learn about their unique flavor profiles.</p>
                 <div class="info">
-                    <p><strong>Duration:</strong> 1-2 hours</p>
-                    <p><strong>Cost:</strong> CHF 65 per adult</p>
-                    <p><strong>Location:</strong> Central Interlaken, easily accessible</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Book in advance as workshops fill up quickly, especially during summer months. Consider pairing your chocolate with local wines for a complete Swiss tasting experience.</span></p>
+                    <p><strong>Location:</strong> Jungfraustrasse 35, central Interlaken</p>
+                    <p><strong>Duration:</strong> 75 minutes</p>
+                    <p><strong>Booking:</strong> Advance reservation recommended</p>
+                    <p><strong>Tip:</strong> <span class="highlight">The shop also sells unique chocolate creations with local ingredients like Alpine herbs and Swiss mountain salt. Perfect for gifts to bring home!</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>2. Höheweg Shopping District</h3>
-                <img src="images/hoheweg.jpg" alt="Höheweg main street with shops and mountain views" class="attraction-image">
-                <p>Interlaken's main street, Höheweg, is lined with boutiques, cafés, and Swiss chocolate shops, making it the perfect destination for window shopping and experiencing local culture. The wide, tree-lined boulevard offers stunning views of the Jungfrau mountain as you browse.</p>
-                <p>You'll find luxury watch boutiques, Swiss chocolate shops, souvenir stores, and fashion retailers. The area also features beautiful gardens and historic hotels that showcase the town's rich tourism heritage dating back to the 19th century.</p>
-                
+            <article class="attraction">
+                <h3>2. Interlaken Wine Experience at Chalet Beatus</h3>
+                <img src="images/wine-tasting.jpg" alt="Wine tasting with Alpine views" class="attraction-image">
+                <p>Discover Swiss wines at this intimate tasting experience in a traditional Swiss chalet overlooking Lake Thun. Switzerland keeps 98% of its wine production within its borders, making this a rare opportunity to taste wines you won't find elsewhere.</p>
+                <p>The guided tasting includes 6 premium Swiss wines paired with local cheeses and charcuterie. You'll learn about the unique Alpine terroir and the traditional and modern winemaking techniques used in Switzerland's diverse wine regions.</p>
                 <div class="info">
-                    <p><strong>Highlights:</strong> Luxury watches, Swiss chocolates, fashion, souvenirs</p>
-                    <p><strong>Best Time:</strong> Morning or late afternoon when it's less crowded</p>
-                    <p><strong>Location:</strong> Central Interlaken between the East and West train stations</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Visit the historic Victoria-Jungfrau Grand Hotel for a glimpse of Belle Époque luxury, and stop at one of the outdoor cafés for coffee and people-watching with mountain views.</span></p>
+                    <p><strong>Location:</strong> Chalet Beatus, 10-minute drive from central Interlaken</p>
+                    <p><strong>Duration:</strong> 2 hours</p>
+                    <p><strong>Includes:</strong> 6 wine tastings, cheese and charcuterie pairings, expert guide</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Swiss Chasselas white wine and Pinot Noir are specialties worth trying. The host can arrange shipping for any bottles you'd like to purchase.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>3. Local Wine Tasting Experience</h3>
-                <img src="images/wine-tasting.jpg" alt="Wine tasting with Swiss wines and cheese" class="attraction-image">
-                <p>While the Interlaken region isn't known for vineyards, you can enjoy curated wine tastings featuring selections from across Switzerland's wine regions. Several hotels and restaurants in Interlaken offer wine tasting experiences that pair Swiss wines with local cheeses and charcuterie.</p>
-                <p>These tastings typically include wines from the nearby Thun region as well as selections from the French-speaking cantons of Valais and Vaud, which produce some of Switzerland's finest wines. Learn about the unique terroir and grape varieties that make Swiss wines special yet little-known outside the country.</p>
-                
+            <article class="attraction">
+                <h3>3. Habkern Artisan Village Tour</h3>
+                <img src="images/habkern-crafts.jpg" alt="Traditional Swiss crafts in Habkern village" class="attraction-image">
+                <p>Visit the charming mountain village of Habkern, just 15 minutes from Interlaken, known for its preservation of traditional Swiss crafts. The village is famous for its Alphorn makers, wood carvers, and traditional textile artisans.</p>
+                <p>The guided tour takes you to several workshops where you can watch artisans at work and learn about techniques passed down through generations. Many offer unique handmade items that make perfect authentic souvenirs.</p>
                 <div class="info">
-                    <p><strong>Duration:</strong> 1-2 hours</p>
-                    <p><strong>Highlights:</strong> Swiss wines, cheese pairings, expert guidance</p>
-                    <p><strong>Location:</strong> Various hotels and restaurants in Interlaken</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Look for tastings featuring Chasselas (the most important white grape variety in Switzerland) and Pinot Noir from Valais. Ask about wine tours to the nearby Thun region if you'd like to visit a local winery.</span></p>
+                    <p><strong>Location:</strong> Habkern village, 15-minute drive from Interlaken</p>
+                    <p><strong>Duration:</strong> Half-day tour</p>
+                    <p><strong>Highlights:</strong> Alphorn workshop, wood carving demonstrations, traditional textiles</p>
+                    <p><strong>Tip:</strong> <span class="highlight">The village's specialty is hand-carved wooden items using traditional patterns. These make unique souvenirs you won't find in typical tourist shops.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>4. Specialty Local Goods at Interlaken Market</h3>
-                <img src="images/interlaken-market.jpg" alt="Local market with Swiss specialty products" class="attraction-image">
-                <p>Discover authentic Swiss specialty products at Interlaken's local markets, where you can find everything from artisanal cheeses and cured meats to handcrafted souvenirs and local honey. The markets offer a more authentic shopping experience than the tourist shops on the main street.</p>
-                <p>Look for Bernese Oberland specialties like Alp cheese (made in summer on mountain pastures), dried meat specialties, mountain herb products, and handcrafted wooden items that showcase the region's traditional craftsmanship.</p>
-                
+            <article class="attraction">
+                <h3>4. Höheweg Shopping Promenade</h3>
+                <img src="images/hoheweg.jpg" alt="Höheweg shopping street in Interlaken" class="attraction-image">
+                <p>Interlaken's main shopping street, Höheweg, offers a delightful mix of luxury boutiques, watch shops, souvenir stores, and chocolate shops, all with the stunning backdrop of the Jungfrau mountain. The wide, tree-lined boulevard is perfect for a leisurely shopping experience.</p>
+                <p>Notable stops include Bucherer for Swiss watches, Läderach for premium chocolates, and various boutiques offering Swiss-made products from pocket knives to fine textiles and mountain gear.</p>
                 <div class="info">
-                    <p><strong>Market Days:</strong> Typically Tuesday and Saturday mornings</p>
-                    <p><strong>Highlights:</strong> Local cheeses, mountain herbs, handcrafts, honey</p>
-                    <p><strong>Location:</strong> Various locations in Interlaken depending on the day</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Ask vendors for samples before buying, and bring cash as not all vendors accept cards. For the freshest products, arrive early in the morning when the market opens.</span></p>
+                    <p><strong>Location:</strong> Central Interlaken</p>
+                    <p><strong>Shopping Hours:</strong> Most shops open 9am-6:30pm (shorter hours on Sundays)</p>
+                    <p><strong>Highlights:</strong> Swiss watches, chocolates, textiles, and outdoor gear</p>
+                    <p><strong>Tip:</strong> <span class="highlight">For tax-free shopping, ask for a Global Blue tax refund form for purchases over 300 CHF. The forms can be processed at the airport when leaving Switzerland.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>5. Top of Europe Flagship Store</h3>
-                <img src="images/top-of-europe-store.jpg" alt="Top of Europe Flagship Store with Swiss souvenirs" class="attraction-image">
-                <p>This premium shopping destination offers a wide variety of high-quality Swiss souvenirs, including chocolates, watches, and unique keepsakes. The store features products from renowned Swiss brands and exclusive Jungfrau region merchandise.</p>
-                <p>Beyond typical souvenirs, you'll find luxury Swiss watches, premium chocolate gift sets, authentic Swiss Army knives, and high-quality textiles. The store's knowledgeable staff can help you find authentic Swiss products and explain their significance.</p>
-                
+            <article class="attraction">
+                <h3>5. Brienz Woodcarving Museum & Workshops</h3>
+                <img src="images/brienz-woodcarving.jpg" alt="Intricate woodcarvings at Brienz museum" class="attraction-image">
+                <p>The picturesque village of Brienz, just a 20-minute train ride from Interlaken, has been the center of Swiss woodcarving tradition since the 19th century. The Woodcarving Museum showcases exquisite pieces from simple household items to elaborate artistic sculptures.</p>
+                <p>After touring the museum, you can visit the connected School of Woodcarving workshops where current students and masters demonstrate their craft. The village also features numerous woodcarving shops where you can purchase authentic pieces directly from artisans.</p>
                 <div class="info">
-                    <p><strong>Highlights:</strong> Premium Swiss products, exclusive Jungfrau merchandise</p>
-                    <p><strong>Location:</strong> Central Interlaken, near Höheweg</p>
-                    <p><strong>Best For:</strong> High-quality souvenirs and gifts</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Look for the special Jungfrau region chocolates that aren't available elsewhere. Tax-free shopping may be available for purchases over a certain amount.</span></p>
+                    <p><strong>Location:</strong> Brienz, 20 minutes from Interlaken by train</p>
+                    <p><strong>Museum Hours:</strong> 10am-5pm, Tuesday-Saturday (May-October)</p>
+                    <p><strong>Workshops:</strong> Demonstrations available most weekdays</p>
+                    <p><strong>Tip:</strong> <span class="highlight">The specialty of the region is the Brienz Bear, a traditional carved wooden bear in various poses. These make excellent authentic souvenirs with real cultural significance.</span></p>
                 </div>
-            </div>
+            </article>
         </section>
         
         <!-- Caleb's Section -->
@@ -301,163 +185,152 @@
                 </div>
             </div>
             
-            <div class="attraction">
+            <article class="attraction">
                 <h3>1. Paragliding Over Interlaken</h3>
-                <img src="images/paragliding.jpg" alt="Paragliding over Interlaken with lake views" class="attraction-image">
-                <p>Experience the ultimate adrenaline rush with a tandem paragliding flight over Interlaken, offering breathtaking aerial views of Lake Brienz, Lake Thun, and the surrounding Alps. After a brief safety briefing, you'll take off from a mountain launch site with an experienced pilot.</p>
-                <p>The flight typically lasts 15-20 minutes, during which you'll soar like a bird over one of Switzerland's most beautiful landscapes. Your pilot may perform some gentle acrobatic maneuvers if you're comfortable with it, adding extra excitement to the experience.</p>
-                
+                <img src="images/paragliding.jpg" alt="Paragliding over Interlaken with mountain views" class="attraction-image">
+                <p>Experience the ultimate adrenaline rush with a tandem paragliding flight over Interlaken, offering breathtaking aerial views of Lake Brienz, Lake Thun, and the surrounding Alps. Launch from either Beatenberg or Harder Kulm and soar like a bird for 15-20 minutes.</p>
+                <p>No experience is necessary as you'll fly with a certified instructor who handles all the technical aspects while you enjoy the ride. Many pilots offer aerobatic maneuvers for those seeking extra thrills.</p>
                 <div class="info">
-                    <p><strong>Duration:</strong> 1.5 hours total (including transportation and briefing)</p>
-                    <p><strong>Physical Requirements:</strong> No experience necessary, suitable for most fitness levels</p>
-                    <p><strong>Best Weather:</strong> Morning flights typically have the calmest conditions</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Wear layers as it can be cooler at the launch site, and bring a small camera that can be secured (most operators offer photo/video packages as well). Book early in your trip in case of weather cancellations.</span></p>
+                    <p><strong>Duration:</strong> 15-20 minutes flight time (2 hours total with preparation)</p>
+                    <p><strong>Requirements:</strong> Weight between 20-110kg, reasonable fitness level</p>
+                    <p><strong>Best Time:</strong> Morning flights often have the best conditions</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Book early in your trip so you have flexibility to reschedule if weather conditions aren't ideal. Most companies offer GoPro video and photo packages for an additional fee.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>2. Canyoning in Chli Schliere</h3>
-                <img src="images/canyoning.jpg" alt="Canyoning adventure in a Swiss gorge" class="attraction-image">
-                <p>Dive into the exhilarating world of canyoning at Chli Schliere, where you'll slide down natural waterslides, jump into crystal-clear pools, and rappel down waterfalls. This half-day adventure combines swimming, climbing, and hiking through a spectacular alpine canyon.</p>
-                <p>After a safety briefing and equipment fitting, professional guides will lead you through the canyon, teaching techniques and ensuring safety while you navigate through the gorge. The experience offers a unique perspective of Switzerland's natural beauty from within its water-carved landscapes.</p>
-                
+            <article class="attraction">
+                <h3>2. Canyoning in Grimsel or Chli Schliere</h3>
+                <img src="images/canyoning.jpg" alt="Canyoning adventure in Swiss gorge" class="attraction-image">
+                <p>Canyoning combines hiking, climbing, jumping, and swimming as you navigate through narrow gorges carved by mountain streams. The Interlaken region offers several world-class canyoning locations for different experience levels.</p>
+                <p>Grimsel Canyon offers bigger jumps and slides for the more adventurous, while Chli Schliere provides a great introduction to the sport with moderate challenges. Both feature crystal-clear mountain water, natural water slides, and jumps into deep pools.</p>
                 <div class="info">
-                    <p><strong>Duration:</strong> 4-5 hours (including transportation and briefing)</p>
-                    <p><strong>Physical Requirements:</strong> Good swimming ability, reasonable fitness level</p>
-                    <p><strong>Includes:</strong> All necessary equipment (wetsuit, helmet, harness)</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Wear swimwear under your clothes and bring a towel and change of clothes. The water is refreshingly cool even in June, but the wetsuits keep you comfortable.</span></p>
+                    <p><strong>Duration:</strong> Half-day (4-5 hours including transportation and preparation)</p>
+                    <p><strong>Includes:</strong> All necessary equipment, professional guides, transportation</p>
+                    <p><strong>Requirements:</strong> Swimming ability, reasonable fitness level</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Wear swimwear under your clothes and bring a towel and change of clothes. The water is refreshingly cool even in summer!</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>3. Canyon Swing in Grindelwald</h3>
-                <img src="images/canyon-swing.jpg" alt="Canyon swing adventure in the Swiss Alps" class="attraction-image">
-                <p>For the ultimate thrill-seeker experience, the Canyon Swing in Grindelwald offers a heart-stopping 90-meter free fall into a canyon before swinging through the gorge. Unlike bungee jumping, the canyon swing creates a massive pendulum motion after the initial drop.</p>
-                <p>You can choose from various jump styles ranging from standard to more adventurous options like backward or upside-down. The entire experience takes place in a stunning alpine setting with professional staff ensuring your safety throughout.</p>
-                
+            <article class="attraction">
+                <h3>3. Alpine Cheese Trail & Tasting Experience</h3>
+                <img src="images/cheese-making.jpg" alt="Traditional Alpine cheese making demonstration" class="attraction-image">
+                <p>Discover the art of traditional Swiss cheese-making at a working Alpine dairy. This experience combines a moderate hike through Alpine meadows with visits to mountain huts where cheese is still made using centuries-old methods.</p>
+                <p>You'll learn about the entire process from milking to aging, and sample various mountain cheeses at different stages of maturation. The experience includes a hearty lunch featuring raclette or fondue made with the dairy's own cheese.</p>
                 <div class="info">
-                    <p><strong>Duration:</strong> 2-3 hours including transportation from Interlaken</p>
-                    <p><strong>Physical Requirements:</strong> No experience necessary, weight restrictions apply</p>
-                    <p><strong>Includes:</strong> Safety equipment, instruction, and transportation</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Consider trying one of the more adventurous jump styles for an even bigger adrenaline rush. Photos and videos are available for purchase to capture your epic moment.</span></p>
+                    <p><strong>Location:</strong> Isenfluh-Sulwald area, 20 minutes from Interlaken</p>
+                    <p><strong>Duration:</strong> 6 hours including lunch</p>
+                    <p><strong>Difficulty:</strong> Moderate hiking (about 8km with 300m elevation gain)</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Try Alpkäse (Alpine cheese) made in summer when cows graze on herb-rich mountain pastures, giving the cheese distinctive flavors you won't find in valley-produced varieties.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>4. Jet Boat Ride on Lake Brienz</h3>
-                <img src="images/jet-boat.jpg" alt="Jet boat speeding across Lake Brienz" class="attraction-image">
-                <p>Experience high-speed thrills on a jet boat ride across the turquoise waters of Lake Brienz. These powerful boats perform 360-degree spins, high-speed runs, and power stops that send spray flying, all against the backdrop of the surrounding mountains.</p>
-                <p>Between adrenaline-pumping maneuvers, you'll also get to enjoy the stunning scenery of Lake Brienz, including views of waterfalls cascading down mountain sides and picturesque Swiss villages along the shoreline.</p>
-                
+            <article class="attraction">
+                <h3>4. White Water Rafting on Lütschine River</h3>
+                <img src="images/rafting.jpg" alt="White water rafting on the Lütschine River" class="attraction-image">
+                <p>Navigate the thrilling rapids of the Lütschine River as it carries glacier meltwater from the mountains around Grindelwald and Lauterbrunnen down to Lake Brienz. This exhilarating white water rafting adventure offers Class III-IV rapids surrounded by spectacular Alpine scenery.</p>
+                <p>Professional guides ensure safety while maximizing the excitement as you paddle through churning white water, waves, and drops. The Lütschine is known for its crystal-clear turquoise water and the stunning backdrop of snow-capped mountains.</p>
                 <div class="info">
-                    <p><strong>Duration:</strong> 1 hour on the water</p>
-                    <p><strong>Departure Point:</strong> Interlaken East harbor</p>
-                    <p><strong>Includes:</strong> Safety briefing, life jackets, and waterproof ponchos</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Wear clothes that can get wet despite the ponchos provided. Secure any loose items as the ride can get quite wild during the spins and stops.</span></p>
+                    <p><strong>Duration:</strong> 3-4 hours (including preparation and transportation)</p>
+                    <p><strong>Season:</strong> May to September (peak flow in June with snowmelt)</p>
+                    <p><strong>Requirements:</strong> Swimming ability, minimum age 14-16 depending on water levels</p>
+                    <p><strong>Tip:</strong> <span class="highlight">June is an excellent time for rafting as the snowmelt creates higher water levels and more exciting rapids. Wear quick-drying clothes under the provided wetsuit.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>5. Swiss Alpine Cuisine Experience</h3>
-                <img src="images/swiss-cuisine.jpg" alt="Traditional Swiss alpine cuisine with cheese and meats" class="attraction-image">
-                <p>Discover authentic Swiss Alpine cuisine through a culinary tour of Interlaken's best traditional restaurants. Sample dishes like raclette (melted cheese scraped onto potatoes), rösti (crispy potato pancake), älplermagronen (Alpine macaroni with cheese, potatoes, and caramelized onions), and authentic Swiss fondue.</p>
-                <p>For the adventurous eater, try more unique local specialties like Berner Platte (a mixed meat platter including smoked pork and sausages) or seasonal game dishes that showcase the hunting traditions of the region.</p>
-                
+            <article class="attraction">
+                <h3>5. Rösti & Raclette Cooking Workshop</h3>
+                <img src="images/cooking-class.jpg" alt="Swiss cooking class with traditional dishes" class="attraction-image">
+                <p>Learn to prepare authentic Swiss cuisine in this hands-on cooking workshop focused on traditional Alpine specialties. Under the guidance of a local chef, you'll master classics like rösti (crispy potato pancake), raclette (melted cheese served with potatoes and pickles), and älplermagronen (Alpine macaroni with cheese, potatoes, and caramelized onions).</p>
+                <p>The class takes place in a traditional Swiss chalet kitchen and concludes with a feast of your creations paired with local wines or craft beers. You'll receive recipe cards to recreate these dishes at home.</p>
                 <div class="info">
-                    <p><strong>Recommended Restaurants:</strong> Restaurant Laterne, Chalet-Restaurant Bödeli, Bären Restaurant</p>
-                    <p><strong>Local Specialties:</strong> Cheese fondue, raclette, rösti, Berner Platte</p>
-                    <p><strong>Beverage Pairings:</strong> Local Swiss wines, craft beers from Rugenbräu Brewery</p>
-                    <p><strong>Tip:</strong> <span class="highlight">For the most authentic experience, look for restaurants displaying the "Swiss Culinary Heritage" label. Many traditional dishes are meant for sharing, so they're perfect for a family meal.</span></p>
+                    <p><strong>Location:</strong> Matten bei Interlaken, 5 minutes from central Interlaken</p>
+                    <p><strong>Duration:</strong> 3 hours including dining time</p>
+                    <p><strong>Group Size:</strong> Small groups of 4-8 participants</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Ask about regional variations of these dishes. Each valley in Switzerland has its own twist on these classics, using local cheeses and ingredients specific to their area.</span></p>
                 </div>
-            </div>
+            </article>
         </section>
         
         <!-- Ryan's Section -->
         <section class="person-section" id="ryan">
             <div class="person-header">
-                <div class="person-avatar" style="background-color: #3498db;">R</div>
+                <div class="person-avatar" style="background-color: #e74c3c;">R</div>
                 <div>
                     <h2 class="person-name">Ryan's Top 5</h2>
-                    <p class="person-interests">Indoor activities, e-scooter tours, tech-related attractions, and scenic vistas without extensive hiking</p>
+                    <p class="person-interests">Indoor activities, e-scooter tours, tech attractions, and scenic vistas requiring minimal hiking</p>
                 </div>
             </div>
             
-            <div class="attraction">
-                <h3>1. E-Scooter Culture Tour</h3>
-                <img src="images/e-scooter-tour.jpg" alt="E-scooter tour through Interlaken" class="attraction-image">
-                <p>Explore Interlaken's cultural highlights on this guided three-hour e-scooter tour that requires minimal physical exertion. The tour takes you to various castles around Interlaken and includes a ride on the funicular railway to Heimwehfluh, where you can enjoy a light snack before descending via a toboggan run.</p>
-                <p>The e-scooters are easy to operate and provide a fun way to cover more ground than walking while still enjoying the fresh air and scenery. Your guide will share interesting facts about Interlaken's history and culture throughout the tour.</p>
-                
+            <article class="attraction">
+                <h3>1. E-Scooter Tour Around Lake Brienz</h3>
+                <img src="images/e-scooter-tour.jpg" alt="E-scooter tour along Lake Brienz" class="attraction-image">
+                <p>Explore the stunning shores of Lake Brienz on an electric scooter tour that combines technology with natural beauty. These powerful yet easy-to-ride e-scooters allow you to cover significant distances without physical exertion, making it perfect for enjoying scenic views without hiking.</p>
+                <p>The guided tour follows a mostly flat route along the turquoise waters of Lake Brienz, passing through picturesque villages, waterfall viewpoints, and scenic photo spots. Stops are made at key locations for photos and refreshments.</p>
                 <div class="info">
                     <p><strong>Duration:</strong> 3 hours</p>
-                    <p><strong>Difficulty:</strong> Easy, no special skills required</p>
-                    <p><strong>Includes:</strong> E-scooter rental, helmet, guide, funicular ticket</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Wear comfortable clothes and bring sunscreen. The e-scooters have a basket for small personal items. This tour is perfect for those who want to see the sights without extensive walking.</span></p>
+                    <p><strong>Distance:</strong> Approximately 25km</p>
+                    <p><strong>Requirements:</strong> Minimum age 16, valid ID</p>
+                    <p><strong>Tip:</strong> <span class="highlight">The e-scooters have different power modes, so you can adjust the assistance level based on your comfort. The tour includes a stop at the famous Giessbach Falls, which is spectacular in June with peak snowmelt.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>2. Jungfrau Virtual Reality Experience</h3>
-                <img src="images/vr-experience.jpg" alt="Virtual reality experience of the Jungfrau region" class="attraction-image">
-                <p>Experience the thrill of the Swiss Alps without the physical exertion at the Jungfrau VR Adventure in central Interlaken. This cutting-edge virtual reality experience lets you "climb" the famous peaks, "paraglide" over the lakes, and "ski" down pristine slopes—all from the comfort of a high-tech VR chair.</p>
-                <p>The experience uses state-of-the-art VR technology with motion platforms that simulate the feeling of movement, combined with wind effects and temperature changes to create an incredibly immersive experience of the region's most spectacular adventures.</p>
-                
+            <article class="attraction">
+                <h3>2. Jungfrau Park VR Experience</h3>
+                <img src="images/vr-experience.jpg" alt="Virtual reality experience at Jungfrau Park" class="attraction-image">
+                <p>Experience the thrill of the Swiss Alps without the physical demands at Jungfrau Park's cutting-edge VR center. Using the latest virtual reality technology, you can "climb" the Eiger, "paraglide" over Interlaken, or "ski" down pristine slopes—all while staying safely indoors.</p>
+                <p>The park features multiple VR stations with different Alpine experiences, from adrenaline-pumping adventures to peaceful scenic tours. The hyper-realistic simulations include wind effects, motion platforms, and 4K visuals for a truly immersive experience.</p>
                 <div class="info">
-                    <p><strong>Duration:</strong> 45 minutes</p>
-                    <p><strong>Location:</strong> Central Interlaken, near Höheweg</p>
-                    <p><strong>Best For:</strong> Tech enthusiasts and those who want alpine thrills without physical challenges</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Book the first session of the day to avoid waiting times. If you're prone to motion sickness, let the staff know and they can adjust the intensity of the experience.</span></p>
+                    <p><strong>Location:</strong> Jungfrau Park, Interlaken</p>
+                    <p><strong>Hours:</strong> 10am-6pm daily (May-October)</p>
+                    <p><strong>Experience Options:</strong> Multiple VR adventures available with various intensity levels</p>
+                    <p><strong>Tip:</strong> <span class="highlight">The "Scenic Switzerland" VR tour is perfect for those who want to experience the views without intense action. It takes you to places that would normally require challenging hikes.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
+            <article class="attraction">
                 <h3>3. Harder Kulm Funicular & Panorama Restaurant</h3>
                 <img src="images/harder-kulm-funicular.jpg" alt="Harder Kulm funicular railway and restaurant" class="attraction-image">
                 <p>Enjoy spectacular mountain views without the hike by taking the Harder Kulm funicular railway to Interlaken's local mountain. The modern cable car whisks you up to 1,322 meters in just 10 minutes, where you'll find the "Two Lakes Bridge" viewing platform with panoramic views of Lake Thun, Lake Brienz, and the Eiger, Mönch, and Jungfrau mountains.</p>
                 <p>At the top, relax at the Panorama Restaurant in a building designed like a Swiss castle, where you can enjoy traditional Swiss cuisine while taking in the breathtaking views through floor-to-ceiling windows.</p>
-                
                 <div class="info">
-                    <p><strong>Duration:</strong> 2-3 hours (including meal time)</p>
-                    <p><strong>Operating Hours:</strong> April to October, 9:30 AM to 9:30 PM (perfect for our June visit)</p>
-                    <p><strong>Accessibility:</strong> Fully accessible by funicular, minimal walking required</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Consider going for dinner around sunset for a magical atmosphere as the mountains and lakes are bathed in golden light. Reservations recommended for the restaurant, especially during peak season.</span></p>
+                    <p><strong>Operating Hours:</strong> 9:30am-9:30pm (April-October)</p>
+                    <p><strong>Journey Time:</strong> 10 minutes each way</p>
+                    <p><strong>Facilities:</strong> Restaurant, viewing platform, souvenir shop</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Consider going up for sunset and dinner when the mountains are bathed in golden light. The last descent is usually around 9:40pm in summer, giving you plenty of time to enjoy the evening views.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
+            <article class="attraction">
                 <h3>4. Swiss Chocolate & Ice Cream Tech Tour</h3>
                 <img src="images/chocolate-tech-tour.jpg" alt="High-tech chocolate making demonstration" class="attraction-image">
                 <p>Discover the fascinating intersection of traditional Swiss chocolate-making and modern technology at this unique tour that showcases how cutting-edge techniques are revolutionizing Switzerland's most famous culinary art. The experience includes demonstrations of 3D chocolate printing, molecular gastronomy techniques, and robot-assisted production.</p>
                 <p>The tour concludes with a tasting session featuring innovative chocolate and ice cream creations like nitrogen-frozen ice cream with unusual flavor combinations and texturally complex chocolate confections created using the latest food tech.</p>
-                
                 <div class="info">
-                    <p><strong>Duration:</strong> 2 hours</p>
                     <p><strong>Location:</strong> Schuh Chocolate Studio, central Interlaken</p>
-                    <p><strong>Includes:</strong> Guided tour, technology demonstrations, tastings</p>
-                    <p><strong>Tip:</strong> <span class="highlight">Ask about their special "tech fusion" flavors that combine traditional Swiss ingredients with unexpected elements. The tour is popular with tech enthusiasts and foodies alike.</span></p>
+                    <p><strong>Duration:</strong> 90 minutes</p>
+                    <p><strong>Includes:</strong> Guided tour, demonstrations, tastings</p>
+                    <p><strong>Tip:</strong> <span class="highlight">The studio's signature creation is a 3D-printed chocolate map of the Jungfrau region that you can customize with your favorite hiking routes or places you've visited.</span></p>
                 </div>
-            </div>
+            </article>
             
-            <div class="attraction">
-                <h3>5. Lake Brienz Scenic Cruise</h3>
-                <img src="images/lake-brienz-cruise.jpg" alt="Cruise ship on Lake Brienz with mountain views" class="attraction-image">
-                <p>Relax on a comfortable cruise ship as you glide across the turquoise waters of Lake Brienz, taking in spectacular mountain scenery without any physical exertion. The modern vessels offer panoramic windows, open-air decks, and comfortable seating while you enjoy views of waterfalls, charming villages, and alpine peaks.</p>
-                <p>The cruise makes stops at picturesque villages like Iseltwald and Giessbach, where you can see the famous Giessbach Falls cascading down the mountainside. Onboard amenities include a restaurant serving Swiss specialties and a bar offering local wines and beers.</p>
-                
+            <article class="attraction">
+                <h3>5. Boat Cruise on Lake Thun with Dinner</h3>
+                <img src="images/lake-thun-cruise.jpg" alt="Boat cruise on Lake Thun with mountain views" class="attraction-image">
+                <p>Enjoy the spectacular Alpine scenery surrounding Lake Thun from the comfort of a modern cruise boat. The evening dinner cruise is particularly recommended, offering a relaxing way to take in the mountain panorama while enjoying a gourmet meal featuring local specialties.</p>
+                <p>The route passes picturesque lakeside villages, medieval castles, and offers unparalleled views of the Bernese Alps. The boat features both indoor dining areas with panoramic windows and outdoor viewing decks perfect for photography.</p>
                 <div class="info">
-                    <p><strong>Duration:</strong> 1-2 hours (depending on route chosen)</p>
-                    <p><strong>Departure Point:</strong> Interlaken Ost boat station</p>
-                    <p><strong>Frequency:</strong> Multiple departures daily during summer months</p>
-                    <p><strong>Tip:</strong> <span class="highlight">The "Three Lakes Classic Pass" offers unlimited travel on Lakes Thun, Brienz, and Lucerne for three consecutive days, perfect if you enjoy being on the water. The upper deck offers the best views and photography opportunities.</span></p>
+                    <p><strong>Departure:</strong> Interlaken West boat dock</p>
+                    <p><strong>Duration:</strong> 2.5 hours</p>
+                    <p><strong>Dinner Cruise:</strong> Available Tuesday, Thursday, and Saturday evenings in summer</p>
+                    <p><strong>Tip:</strong> <span class="highlight">Request a window table when booking for the best views. The sunset dinner cruise offers spectacular lighting for photography as the mountains are illuminated with golden and pink hues.</span></p>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
-
+    
     <footer>
-        <p>Interlaken, Switzerland - Trip Planning Document</p>
-        <p>Last updated: April 5, 2025</p>
-        <p><a href="../index.html">Back to Trip Overview</a> | <a href="../../index.html">Back to Main Page</a></p>
+        <p>Created for our family trip to Switzerland and Italy in June 2026</p>
+        <p>Last updated: April 6, 2025</p>
     </footer>
 </body>
 </html>
